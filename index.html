@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Assignment2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- <img href="https://i.stack.imgur.com/jGlzr.png"> -->
+        <div class="main">
+            <h3>Sort</h3>
+            <p id="in">6, 65, 43, 56, 216, 3132, 5485, 215</p>
+            <div class="btn">
+                <button onclick="ascending()">Sort in Ascending</button>
+                <button onclick="descending()">Sort in Descending</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        function ascending() {
+            const no= [6, 65, 43, 56, 216, 3132, 5485, 215]
+            no.sort(function(a, b){return a - b})
+            document.getElementById("in").innerHTML= no
+        }
+        function descending() {
+            const no= [6, 65, 43, 56, 216, 3132, 5485, 215]
+            no.sort(function(a, b){return b - a})
+            document.getElementById("in").innerHTML= no
+        }
+    </script>
+</body>
+</html>
